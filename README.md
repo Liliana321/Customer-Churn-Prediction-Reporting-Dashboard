@@ -89,7 +89,7 @@ customer-churn-dashboard/
 
 🔧 **Il progetto è in fase di completamento.** Sono previste ulteriori estensioni con:
 - Dashboard interattiva (es. Streamlit)
-- Report PDFì
+- Report PDF
 
 ---
 
