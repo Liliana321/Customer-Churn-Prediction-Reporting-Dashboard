@@ -1,7 +1,6 @@
-### importazione librerie 
 
 import pandas as pd
-## data cleaning
+
 
 
 def preprocess_churn_data(df):
