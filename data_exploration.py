@@ -1,15 +1,7 @@
 # EDA
-from data_cleaning import preprocess_churn_data
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df=pd.read_csv("Churn.csv")
-df = preprocess_churn_data(df)
-
-
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 def plot_churn_by_features(df):
     features = ['gender', 'SeniorCitizen', 'Partner', 'Dependents']
