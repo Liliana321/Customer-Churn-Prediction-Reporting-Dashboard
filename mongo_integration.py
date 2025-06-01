@@ -29,9 +29,6 @@ password = input("Inserisci la tua password: ")
 
 client, db, collection = connect_to_mongodb(username, password)
 
-# Ora puoi eseguire query
-print(collection.find_one())
-
 # Aggregazione per contare i clienti per ciascun valore di Churn
 pipeline = [
     {
