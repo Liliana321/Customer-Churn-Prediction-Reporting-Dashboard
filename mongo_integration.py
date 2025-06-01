@@ -15,12 +15,12 @@ def connect_to_mongodb(username, password):
 
     # Verifica se la collezione è vuota
     if collection.estimated_document_count() == 0:
-        print("⚠️ Collezione vuota. Caricamento dati da CSV in corso...")
+        print("Collezione vuota. Caricamento dati da CSV in corso...")
         df = df = preprocess_churn_data(pd.read_csv("Churn.csv"))
         collection.insert_many(df.to_dict("records"))
-        print(f"✅ Inseriti {len(df)} documenti nella collezione 'customers'.")
+        print(f"Inseriti {len(df)} documenti nella collezione 'customers'.")
     else:
-        print("✅ Collezione già popolata.")
+        print("Collezione già popolata.")
 
     return client, db, collection
 
