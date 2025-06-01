@@ -57,22 +57,22 @@ grid.fit(X_train, y_train)
 
 # Valutazione
 best_model = grid.best_estimator_
-print("\n✅ Migliori parametri trovati:")
+print("\n Migliori parametri trovati:")
 print(grid.best_params_)
 
 y_pred = best_model.predict(X_test)
 y_proba = best_model.predict_proba(X_test)[:, 1]
 
-print("\n📋 Classification Report:")
+print("\n Classification Report:")
 print(classification_report(y_test, y_pred))
 
-print("📈 ROC AUC Score:", roc_auc_score(y_test, y_proba))
+print("ROC AUC Score:", roc_auc_score(y_test, y_proba))
 
-print("🧮 Confusion Matrix:")
+print("Confusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
 
 # Metriche principali
-print("\n🔍 METRICHE DI VALUTAZIONE:")
+print("\n METRICHE DI VALUTAZIONE:")
 print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
 print(f"Precision: {precision_score(y_test, y_pred):.4f}")
 print(f"Recall: {recall_score(y_test, y_pred):.4f}")
